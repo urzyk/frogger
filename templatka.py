@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import pygame
 import random as Random
 from pygame.locals import *
@@ -441,7 +443,7 @@ if __name__ == "__main__":
 
 
     trilha_sound.play(-1)
-    text_info = menu_font.render(('Naciśnij dowolny przycisk!'),1,(0,0,0))
+    text_info = menu_font.render(('Nacisnij dowolny przycisk!'),1,(0,0,0))
     gameInit = 0
 
     while gameInit == 0:
@@ -511,7 +513,7 @@ if __name__ == "__main__":
             nextLevel(chegaram,enemys,plataforms,frog,game)
 
             text_info1 = info_font.render(('Poziom: {0}               Punkty: {1}'.format(game.level,game.points)),1,(255,255,255))
-            text_info2 = info_font.render(('Czas: {0}           Życia: {1}'.format(game.time,frog.lives)),1,(255,255,255))
+            text_info2 = info_font.render(('Czas: {0}           Zycia: {1}'.format(game.time,frog.lives)),1,(255,255,255))
             screen.blit(background, (0, 0))
             screen.blit(text_info1,(10,520))
             screen.blit(text_info2,(250,520))
@@ -541,9 +543,9 @@ if __name__ == "__main__":
                     gameInit = 0
 
             screen.blit(background, (0, 0))
-            text = game_font.render('ROZJECHANY!', 1, (255, 0, 0))
+            text = game_font.render('ROZJECHANA!', 1, (255, 0, 0))
             text_points = game_font.render(('Punkty: {0}'.format(game.points)),1,(255,0,0))
-            text_reiniciar = info_font.render('Naciśnij przycisk, aby spróbować ponownie!',1,(255,0,0))
+            text_reiniciar = info_font.render('Nacisnij przycisk, aby sprobowac ponownie!',1,(255,0,0))
             screen.blit(text, (75, 120))
             screen.blit(text_points,(10,170))
             screen.blit(text_reiniciar,(70,250))
